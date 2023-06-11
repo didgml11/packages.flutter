@@ -28,6 +28,8 @@ class PdfController with BasePdfController {
   PageController? _pageController;
   PdfDocument? _document;
 
+  PageController? get pageController => _pageController;
+  
   /// Actual page number wrapped with ValueNotifier
   @override
   late final ValueNotifier<int> pageListenable = ValueNotifier(initialPage);
